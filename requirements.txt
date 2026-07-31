@@ -1,0 +1,26 @@
+# Nemotron Parse 2.0 benchmark
+#
+# Install with the SAME interpreter used for vllm serve:
+#   python3.10 -m pip install --user -r requirements.txt
+#
+# Never use --force-reinstall here: it resolves torch upward,
+# breaks torchvision, and vLLM then fails to import.
+
+# serving — pins torch 2.11.0+cu130, needs NVIDIA driver >= 580
+vllm==0.26.0
+
+# model remote code (C-RADIO vision encoder)
+timm
+albumentations
+open_clip_torch
+einops
+
+# repo postprocessing (latex2html.py imports bs4)
+beautifulsoup4
+
+# benchmark harness
+openai
+pillow
+requests
+pypdfium2
+huggingface_hub

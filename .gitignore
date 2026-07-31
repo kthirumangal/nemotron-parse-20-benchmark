@@ -1,0 +1,21 @@
+# generated per run — regenerate with nemotron_eval.py
+outputs/
+
+# fetched from the model repo, not ours to vendor
+postprocessing.py
+latex2html.py
+hf_*.py
+run_transformers_inference.py
+vllm_example.py
+example_with_processor.py
+test_golden.py
+logitsprocs/
+
+# local caches
+__pycache__/
+*.pyc
+.venv/
+
+# reference data — prior-version output and verdicts, kept local
+reference/*.json
+report/
